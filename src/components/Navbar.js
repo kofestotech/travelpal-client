@@ -1,13 +1,25 @@
 import {NavLink} from 'react-router-dom';
-//import {useState, useEffect} from 'react';
+// import {useState, useEffect} from 'react';
 import travelpa from '../images/travelpal-logo.png';
+import './Navbar.css';
 
 const Navbar = () => {
 
-    // useEffect(() => {
-    //     document.querySelector('.navbar-toggler-icon').addEventListener('click',
-    //     ()=>document.querySelector('.navbar-nav').classList.toggle('show'));
-    // }, [])
+//   const [hidden,setHidden] = useState(true);
+
+//   useEffect(() => {
+//     const btn = document.querySelector("button.mobile-menu-button");
+//     const menu = document.querySelector(".mobile-menu");
+//     btn.addEventListener("click", () => {
+//         menu.classList.toggle("hidden");
+//     });
+//   }, [])
+
+  const showMobileMenu = ()=>{
+    const menu = document.querySelector(".mobile-menu");
+    menu.classList.toggle('hidden')
+    // setHidden(!hidden);
+  }
 
   return (
     <>
@@ -46,23 +58,48 @@ const Navbar = () => {
               Sign Up
             </NavLink>
            </div>
+           {/**Mobile menu button */}
+            <div className="md:hidden flex items-center float-right">
+                <button className="outline-none mobile-menu-button" onClick={showMobileMenu}>
+                    <svg className=" w-6 h-6 text-gray-500 hover:text-yellow-500 "
+                        x-show="!showMenu"
+                        fill="none"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        >
+                            <path d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>				
+            </div>
         </div>
-        {/**Mobile menu button */}
-        <div className="md:hidden flex items-center">
-            <button className="outline-none mobile-menu-button">
-                <svg className=" w-6 h-6 text-gray-500 hover:text-green-500 "
-                    x-show="!showMenu"
-                    fill="none"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    >
-                        <path d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg>
-            </button>				
-        </div>
+      </div>
+      {/**Mobile menu className="hidden mobile-menu" {hidden ? 'hidden': 'mobile-menu'} */}
+      <div className="hidden mobile-menu">
+        <ul>
+            <li>
+                <NavLink to='/' className="block text-sm px-2 py-4 text-white bg-green-500 font-semibold">
+                  Services
+                </NavLink>
+            </li>
+            <li>
+                <NavLink to='/' className="block text-sm px-2 py-4 text-white bg-green-500 font-semibold">
+                  Services
+                </NavLink>
+            </li>
+            <li>
+                <NavLink to='/' className="block text-sm px-2 py-4 text-white bg-green-500 font-semibold">
+                  Services
+                </NavLink>
+            </li>
+            <li>
+                <NavLink to='/' className="block text-sm px-2 py-4 text-white bg-green-500 font-semibold">
+                  Services
+                </NavLink>
+            </li>
+        </ul>
       </div>
     </nav>     
     </>
@@ -72,6 +109,15 @@ const Navbar = () => {
 export default Navbar;
 
 /**
+<!-- Mobile menu -->
+<div class="hidden mobile-menu">
+	<ul class="">
+		<li class="active"><a href="index.html" class="block text-sm px-2 py-4 text-white bg-green-500 font-semibold">Home</a></li>
+		<li><a href="#services" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Services</a></li>
+		<li><a href="#about" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">About</a></li>
+		<li><a href="#contact" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Contact Us</a></li>
+	</ul>
+</div>
 
     <nav className="flex items-center justify-between flex-wrap bg-teal-500 p-6">
       <div className="flex items-center flex-shrink-0 text-white mr-6">

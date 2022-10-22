@@ -1,0 +1,97 @@
+/*
+* CSS for Navigation bar 
+*/
+.navbar {
+    background: rgb(20 184 166);
+}
+.mobile-menu-button{
+  left:'auto';
+}
+@media(max-width:1000px){
+    .navbar-toggler-icon{
+       display: block;
+    }
+    .navbar-toggler-icon:hover{
+        opacity: 0.5;
+    }
+    .navbar ul.navbar-nav{
+        display: block;
+        position: absolute;
+        top: 20px;
+        left: 0;
+        background-color: #2dc3fa;
+        z-index: 10;
+        width: 60%;
+        border-right: #ccc 1px solid;
+        opacity: 0.9;
+        padding: 20px;
+        padding-left: 50px;
+        transform: translateX(-500px);
+        transition: transform 0.5s ease-in-out;
+    }
+    .navbar ul.navbar-nav li{
+        padding: 10px;
+        border-bottom: #ccc 1px solid;
+        font-size: 14px;
+    }
+    .navbar ul.navbar-nav li:last-child{
+        border-bottom: 0;
+    }
+    .navbar ul.navbar-nav.show{
+        transform: translateX(-20px);
+    }
+   
+   .nav-item a{
+        color: #333;
+    }
+   .nav-item span{
+        color: #333;
+    }
+    .collapse:not(.show) {
+        display: block;
+    }
+}
+
+@media(max-width:700px){
+    .navbar-toggler-icon{
+       display: block;
+    }
+    .navbar-toggler-icon:hover{
+        opacity: 0.5;
+    }
+    .navbar ul.navbar-nav{
+        display: block;
+        position: absolute;
+        top: 20px;
+        left: 0;
+        background-color: #2dc3fa;
+        z-index: 10;
+        width: 70%;
+        border-right: #ccc 1px solid;
+        opacity: 0.9;
+        padding: 30px;
+        transform: translateX(-500px);
+        transition: transform 0.5s ease-in-out;
+    }
+    .navbar ul.navbar-nav li{
+        padding: 10px;
+        border-bottom: #ccc 1px solid;
+        font-size: 14px;
+    }
+    .navbar ul.navbar-nav li:last-child{
+        border-bottom: 0;
+    }
+    .navbar ul.navbar-nav.show{
+        transform: translateX(-20px);
+    }
+   
+   .nav-item a{
+        color: #333;
+    }
+   .nav-item span{
+        color: #333;
+    }
+    .collapse:not(.show) {
+        display: block;
+    }
+}
