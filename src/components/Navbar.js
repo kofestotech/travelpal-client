@@ -41,20 +41,20 @@ const Navbar = () => {
               <NavLink to='/' className="py-4 px-2 text-gray-500 font-semibold hover:text-white transition duration-300">
                 Services
               </NavLink>
-              <NavLink to='/' className="py-4 px-2 text-gray-500 font-semibold hover:text-white transition duration-300">
+              <NavLink to='/about-us' className="py-4 px-2 text-gray-500 font-semibold hover:text-white transition duration-300">
                 About
               </NavLink>
-              <NavLink to='/' className="py-4 px-2 text-gray-500 font-semibold hover:text-white transition duration-300">
+              <NavLink to='/contact' className="py-4 px-2 text-gray-500 font-semibold hover:text-white transition duration-300">
                 Contact Us
               </NavLink>
             </div>
           </div>
           {/**Secondary navbar items */}
           <div className="hidden md:flex items-center space-x-3">
-            <NavLink to='/' className="py-2 px-2 font-medium text-gray-500 rounded hover:bg-green-500 hover:text-white transition duration-300">
+            <NavLink to='/login' className="py-2 px-2 font-medium text-gray-500 rounded hover:bg-green-500 hover:text-white transition duration-300">
               Login
             </NavLink>
-            <NavLink to='/' className="py-2 px-2 font-medium text-white bg-green-500 rounded hover:bg-green-400 transition duration-300">
+            <NavLink to='/register' className="py-2 px-2 font-medium text-white bg-green-500 rounded hover:bg-green-400 transition duration-300">
               Sign Up
             </NavLink>
            </div>
@@ -85,18 +85,18 @@ const Navbar = () => {
                 </NavLink>
             </li>
             <li>
-                <NavLink to='/' className="block text-sm px-2 py-4 text-white bg-green-500 font-semibold">
-                  Services
+                <NavLink to='/about-us' className="block text-sm px-2 py-4 text-white bg-green-500 font-semibold">
+                  About
+                </NavLink>
+            </li>
+            <li>
+                <NavLink to='/contact' className="block text-sm px-2 py-4 text-white bg-green-500 font-semibold">
+                  Contact Us
                 </NavLink>
             </li>
             <li>
                 <NavLink to='/' className="block text-sm px-2 py-4 text-white bg-green-500 font-semibold">
-                  Services
-                </NavLink>
-            </li>
-            <li>
-                <NavLink to='/' className="block text-sm px-2 py-4 text-white bg-green-500 font-semibold">
-                  Services
+                  Book Now
                 </NavLink>
             </li>
         </ul>
