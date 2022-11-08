@@ -1,10 +1,10 @@
 import React from 'react';
-import Navbar from '../../components/Navbar';
+import NavbarComponent from '../../components/NavbarComponent';
 
 const Register = () => {
   return (
     <>
-    <Navbar />
+    <NavbarComponent />
     <section className="py-4">
        <h2>This is signup page</h2>
     </section>
