@@ -7,7 +7,9 @@ const About = () => {
     <>
     <NavbarComponent />
     <section className="py-4">
-        <h2>This is about us page</h2>
+      <Container>
+        <h2>Hello from about page</h2>
+      </Container>
     </section>
     <FooterComponent/>
     </>

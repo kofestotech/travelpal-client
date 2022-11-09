@@ -1,5 +1,6 @@
 // import {NavLink} from 'react-router-dom';
 import {Container, Navbar, Nav, Offcanvas} from 'react-bootstrap';
+import {LinkContainer} from 'react-router-bootstrap';
 import travelpa from '../images/travelpal-logo.png';
 import './Navbar.css';
 
@@ -10,9 +11,11 @@ const NavbarComponent = () => {
     {['md'].map((expand) =>(
       <Navbar key={expand} expand={expand} className="bg-teal-500 shadow-lg" sticky="top" collapseOnSelect>
         <Container>
-          <Navbar.Brand href='/'>
-            <img alt='logo' src={travelpa} className='img-fluid' style={{width:'80px'}} />
-          </Navbar.Brand>
+          <LinkContainer to='/'>
+            <Navbar.Brand>
+              <img alt='logo' src={travelpa} className='img-fluid' style={{width:'80px'}} />
+            </Navbar.Brand>
+          </LinkContainer>
           <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
           <Navbar.Offcanvas
               id={`offcanvasNavbar-expand-${expand}`}
@@ -21,22 +24,34 @@ const NavbarComponent = () => {
             >
               <Offcanvas.Header closeButton>
                 <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
-                <Navbar.Brand href='/'>
-                  <img alt='logo' src={travelpa} className='img-fluid' style={{width:'100px'}} />
-                </Navbar.Brand>
+                <LinkContainer to='/'>
+                  <Navbar.Brand>
+                    <img alt='logo' src={travelpa} className='img-fluid' style={{width:'100px'}} />
+                  </Navbar.Brand>
+                </LinkContainer>
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="me-auto">
-                  <Nav.Link href="/">Home</Nav.Link>
-                  <Nav.Link href="/about-us">About</Nav.Link>
-                  <Nav.Link href='/contact'>Contact</Nav.Link>
+                  <LinkContainer to='/'>
+                    <Nav.Link>Home</Nav.Link>
+                  </LinkContainer>
+                  <LinkContainer to='/about-us'>
+                   <Nav.Link>About</Nav.Link>
+                  </LinkContainer>
+                  <LinkContainer to="/contact">
+                    <Nav.Link>Contact</Nav.Link>
+                  </LinkContainer>
                 </Nav>
                 <Nav>
-                  <Nav.Link href='/login'>Sign in</Nav.Link>
-                  <Nav.Link href='/register' className="py-2 px-2 font-medium text-white bg-green-500 rounded hover:bg-green-400 transition duration-300">
-                    Book Now
-                  </Nav.Link>
+                  <LinkContainer to='/login'>
+                    <Nav.Link>Sign in</Nav.Link>
+                  </LinkContainer>
+                  <LinkContainer to='/register'>
+                    <Nav.Link className="py-2 px-2 font-medium text-white bg-green-500 rounded hover:bg-green-400 transition duration-300">
+                      Sign Up
+                    </Nav.Link>
+                  </LinkContainer>
                 </Nav>
               </Offcanvas.Body>
             </Navbar.Offcanvas>
