@@ -1,5 +1,6 @@
-import React from 'react';
+import {Container, Row, Col} from 'react-bootstrap';
 import NavbarComponent from '../../components/NavbarComponent';
+import FooterComponent from '../../components/FooterComponent';
 
 const About = () => {
   return (
@@ -8,6 +9,7 @@ const About = () => {
     <section className="py-4">
         <h2>This is about us page</h2>
     </section>
+    <FooterComponent/>
     </>
   )
 }

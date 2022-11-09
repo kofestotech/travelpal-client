@@ -1,13 +1,17 @@
-import React from 'react';
+import {Container, Row, Col} from 'react-bootstrap';
 import NavbarComponent from '../../components/NavbarComponent';
+import FooterComponent from '../../components/FooterComponent';
 
 const Contact = () => {
   return (
     <>
      <NavbarComponent/>
      <section className="py-4">
-        <h2>This is contact page</h2>
+       <Container>
+        <h2>hello from contact</h2>
+       </Container>
      </section>
+     <FooterComponent />
     </>
   )
 }
