@@ -11,6 +11,7 @@ import maldives from '../../images/maldives.jpg';
 import ourika from '../../images/ourika-from-marrakech.jpg';
 import mongolia from '../../images/mongolia.jpg';
 import FooterComponent from '../../components/FooterComponent';
+import FlightCard from '../../components/FlightCard';
 
 const Home = () => {
   return (
@@ -23,7 +24,7 @@ const Home = () => {
           <p className="text-center font-bold text-3xl text-yellow-500 py-6">DISCOVER BEAUTIFUL PLACES WITH US</p>
           <div className="mx-auto rounded py-2">
             {/**Flight booking form component goes here ... */}
-            <p className="text-violet-900">flight booking form component goes here</p>
+            <FlightCard />
           </div>
         </div>
       </div>

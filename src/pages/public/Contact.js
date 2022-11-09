@@ -21,6 +21,7 @@ const Contact = () => {
     if(form.checkValidity() === false){
       e.preventDefault();
     }
+    setValidated(true);
   }
 
   return (
