@@ -119,7 +119,7 @@ const FlightCard = () => {
                    <InputGroup.Text>Children</InputGroup.Text>
                    <Form.Control 
                     type="number" 
-                    min="1"
+                    min="0"
                     defaultValue="0"
                    />
                   </InputGroup>
@@ -130,7 +130,7 @@ const FlightCard = () => {
                    <InputGroup.Text>Infants</InputGroup.Text>
                    <Form.Control 
                     type="number" 
-                    min="1"
+                    min="0"
                     defaultValue="0"
                    />
                   </InputGroup>
@@ -140,6 +140,7 @@ const FlightCard = () => {
             </Card>
           </Col>
         </Row>
+        <button id="search-button" className="w-100 btn btn-primary travel-search" >Search</button>
       </Form>
      </Container>
     </>

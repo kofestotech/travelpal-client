@@ -45,7 +45,9 @@ const NavbarComponent = () => {
                 </Nav>
                 <Nav>
                   <LinkContainer to='/login'>
-                    <Nav.Link>Sign in</Nav.Link>
+                    <Nav.Link className="py-2 px-2 border-2 border-white mr-2 font-medium rounded transition duration-300">
+                      Sign in
+                    </Nav.Link>
                   </LinkContainer>
                   <LinkContainer to='/register'>
                     <Nav.Link className="py-2 px-2 font-medium text-white bg-green-500 rounded hover:bg-green-400 transition duration-300">
